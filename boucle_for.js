@@ -1,5 +1,5 @@
 const reponse = [ "maman", "papa", "oncle", "ami" ];
-const rechercherTache = "papa";
+const rechercherTache = "oncle";
 let existe = false;
 
 for (let i = 0; i < reponse.length; i++) {
