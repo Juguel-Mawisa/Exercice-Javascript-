@@ -1,7 +1,11 @@
-const courses = { title: "Faire les courses", status: "terminée" };
+const myTable = { title: "preparer la nourriture", status: "terminée" };
 
-if (courses.status === "terminée") {
+function verifierStatutTache(tache) {
+  if (tache.status === "terminée") {
     console.log("La tâche est terminée !");
-} else {
+  } else {
     console.log("La tâche n'est pas encore terminée.");
+  }
 }
+
+verifierStatutTache(myTable);
