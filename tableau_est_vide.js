@@ -1,9 +1,16 @@
-        const tableau = []; 
+const reponse = ["maman", "papa", "oncle", "ami"];
 
-        const element = document.getElementById("obed");
+function verifierExistence(tableau, valeur, elementId) {
+  const existe = tableau.includes(valeur); 
 
-        if (!tableau.length) {
-            element.innerHTML = "Le tableau est vide.";
-        } else {
-            element.innerHTML = "Le tableau n'est pas vide.";
-        }
+  if (existe) {
+    document.getElementById(elementId).innerHTML =
+      "La tâche '" + valeur + "' existe dans le tableau.";
+  } else {
+    document.getElementById(elementId).innerHTML =
+      "La tâche '" + valeur + "' n'existe pas dans le tableau.";
+  }
+}
+
+const rechercherTache = "oncle";
+verifierExistence(reponse, rechercherTache, "ferto");
