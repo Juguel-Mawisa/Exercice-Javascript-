@@ -1,16 +1,24 @@
-const reponse = [ "maman", "papa", "oncle", "ami" ];
+const reponse = ["maman", "papa", "oncle", "ami"];
 const rechercherTache = "oncle";
-let existe = false;
 
-for (let i = 0; i < reponse.length; i++) {
-    if (reponse[i] === rechercherTache) {
-        existe = true;
-        break; 
+    function verifierExistence(tableau, element) {
+    let existe = false;
+    for (let i = 0; i < tableau.length; i++) {
+        if (tableau[i] === element) {
+            existe = true;
+            break;
+        }
     }
+    return existe;
 }
 
+function afficherResultat(elementId, message) {
+    document.getElementById(elementId).innerHTML = message;
+}
+
+const existe = verifierExistence(reponse, rechercherTache);
 if (existe) {
-    document.getElementById('ferto').innerHTML = "La tâche '" + rechercherTache + "' existe dans le tableau.";
+    afficherResultat('ferto', "La tâche '" + rechercherTache + "' existe dans le tableau.");
 } else {
-    document.getElementById('ferto').innerHTML = "La tâche '" + rechercherTache+ "' n'existe pas dans le tableau.";
+    afficherResultat('ferto', "La tâche '" + rechercherTache + "' n'existe pas dans le tableau.");
 }
