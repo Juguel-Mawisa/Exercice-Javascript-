@@ -1,12 +1,16 @@
 
 const tableau = [
-    "Savoir ",
+    "Savoir",
     "jouer le ballon",
     "dormir",
-];
-
-const trouverLesGrand = tableau.reduce((max, tache) => {
-    return tache.length > max.length ? tache : max;
-}, "");
-
-console.log("La plus grande tâche est :", trouverLesGrand);
+  ];
+  
+  function trouverPlusGrandeTache(tableau) {
+    return tableau.reduce((max, tache) => {
+      return tache.length > max.length ? tache : max;
+    }, "");
+  }
+  
+  const plusGrandeTache = trouverPlusGrandeTache(tableau);
+  console.log("La plus grande tâche est :", plusGrandeTache);
+  
