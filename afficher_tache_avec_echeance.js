@@ -1,9 +1,14 @@
-const task = {
-    title: "Finaliser la tache",
-    date: "2024-12-01"
-};
-
-const formanterDate = new Date(task.date).toLocaleDateString("fr-FR");
-
-console.log(`Tâche : ${task.title}`);
-console.log(`Date d'échéance : ${formanterDate}`);
+const monTabeau = {
+    title: "Finaliser la tâche",
+    date: "2024-12-01",
+  };
+  
+     function afficherTache(tache) {
+    const formaterDate = new Date(tache.date).toLocaleDateString("fr-FR");
+    console.log(`Tâche : ${tache.title}`);
+    console.log(`Date d'échéance : ${formaterDate}`);
+  }
+  
+  
+  afficherTache(monTabeau);
+  
