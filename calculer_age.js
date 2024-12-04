@@ -1,3 +1,4 @@
+
 function calculerAge(anneeNaissance) {
     const anneeActuelle = new Date().getFullYear(); 
     const age = anneeActuelle - anneeNaissance; 

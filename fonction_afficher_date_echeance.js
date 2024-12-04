@@ -4,6 +4,6 @@ function afficherTache(tache) {
          <p><strong>Date d'échéance :</strong> ${formanterDate}</p>`;
 }
 
-const tache = { title: "Finaliser la tache", date: "2024-11-29" };
+const tache = { title: "Finaliser la tache", date: "2024-12-03" };
 
 document.getElementById("lll").innerHTML = afficherTache(tache);
